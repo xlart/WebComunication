@@ -14,5 +14,9 @@
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14"
+    },
+    "dependencies": {
+        "react-router-dom": "^6.12.1",
+        "styled-components": "^6.0.0-rc.3"
     }
 }

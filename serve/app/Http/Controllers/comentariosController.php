@@ -4,35 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\comentarios;
+use Illuminate\Support\Facades\DB;
 
-class comentariosController extends Controller
+class ComentariosController extends Controller
 {
 
     public function index()
     {
-        return comentarios::all();
+        return DB::select("SELECT texto FROM comentarios");
     }
 
     public function store(Request $request)
     {
-        $comentario = new comentarios();
-        $comentario->id_publicaciones = $request->id_publicaciones;
-        $comentario->texto = $request->texto;
-        $comentario->id_usuarios = $request->id_usuarios;
-        $comentario->save();
-        return $comentario;
+        $nuevo = new comentarios();
+        $nuevo->texto = $request->texto;
+        $nuevo->id_post = $request->id_post;
+        $nuevo->id_usuario = $request->id_usuarios;
+        $nuevo->save();
+        return $nuevo;
     }
-
-    public function update(Request $request, $id)
-    {
-        $comentario = comentarios::find($id);
-        $comentario->id_publicaciones = $request->id_publicaciones;
-        $comentario->texto = $request->texto;
-        $comentario->id_usuarios = $request->id_usuarios;
-        $comentario->save();
-        return $comentario;
-    }
-
 
     public function destroy($id)
     {

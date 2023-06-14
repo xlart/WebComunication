@@ -1,0 +1,96 @@
+*{
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: block;
+    height: 100%;
+}
+#body{
+  height: 100%;
+}
+#carru{
+    height: 300px;
+    width: 400px;
+}
+#cuerpo{
+    background-color: aliceblue;
+    display: flex;
+   
+    height: 100vh;
+    width: 100%;
+    
+    
+}
+
+#izq{
+    padding: 0px 10%;
+    background-color: rgba(46, 10, 228, 0.476);
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-align: center;
+   
+
+
+}
+#der{
+    padding: 0px 10%;
+    background-color: rgba(39, 9, 234, 0.092);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+#p123{
+    text-align: left;
+}
+#p1234{
+    text-align: left;
+    width: 600px;
+}
+#btnlogin{
+    background-color: white;
+    text-decoration: none;
+    margin: 1px solid black;
+    padding: auto;
+
+width: 100%;
+height: 50px;
+font-size: 20px;
+font-weight: bold;
+}
+.btningresar{
+    
+    background-color: blue;
+    text-decoration: black;
+    color: white;
+    font-size: 20px;
+    width: 600px;
+    height: 50px;
+    font-weight: bold;
+}
+#plogin{
+    text-align: left;
+}
+#logologin{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    height: 60px;;
+    padding-bottom: 20px;
+}
+#loguito{
+   height: 100%;
+   width: 80px;
+    
+}

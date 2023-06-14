@@ -2,68 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\usuarios;
 use Illuminate\Http\Request;
+use App\Models\usuario;
 
-class usuariosController extends Controller
+class UsuariosController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        return usuarios::all();
+        return usuario::all();
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        $usuari = new usuarios();
-        $usuari->usuario = $request->usuario;
-        $usuari->id_personas = $request->id_personas;
-        $usuari->password = $request->password;
-        $usuari->save();
-        return $usuari;
+        $nuevo=new usuario();
+        $nuevo->nombre=$request->nombre;
+        $nuevo->usuario=$request->usuario;
+        $nuevo->password=$request->password;
+        $nuevo->save();
+        return $nuevo;
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        //
+        return usuario::destroy($id);
     }
 }
